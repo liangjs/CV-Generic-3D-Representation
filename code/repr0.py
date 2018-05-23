@@ -3,7 +3,6 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, utils, models
 from torch.optim import lr_scheduler
 import os
@@ -12,24 +11,12 @@ from torch.autograd import Variable
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from random import shuffle
 import itertools
 
 import warnings
 warnings.filterwarnings("ignore")
 
-use_gpu = torch.cuda.is_available()
-
-class SceneDataset(Dataset):
-
-    def __init__(self):
-        pass
-
-    def __len__(self):
-        pass
-
-    def __getitem__(self):
-        pass
+from dataloader import *
 
 
 class ReprNet(nn.Module):
@@ -66,8 +53,8 @@ class CompdNet(nn.Module):
         self.fc = nn.Linear(1000, 500)
 
     def forward(self, x0):
-        # x0.size() = [?, 2, 3, 101, 101]
-        x, y = x0[:,0], x0[:,1]
+        # x0.size() = [?, 6, 101, 101]
+        x, y = torch.split(x0, 3, 1)
         x = self.rnet(x)
         y = self.rnet(y)
         x0 = torch.cat((x, y), 1)
@@ -77,11 +64,11 @@ class CompdNet(nn.Module):
 
 class LearnNet(nn.Module):
     
-    def __init__(self, label_num):
+    def __init__(self):
         super(LearnNet, self).__init__()
         self.cnet = CompdNet()
         self.fc_pose = nn.Linear(500, 6)
-        self.fc_match = nn.Linear(500, label_num)
+        self.fc_match = nn.Linear(500, 2)
 
     def forward(self, x):
         x = self.cnet(x)
@@ -114,9 +101,42 @@ fposeloss = FPoseLoss.apply
 def joint_loss(my_pose, my_match, true_pose, true_match):
     global fposeloss
     factor = 1
-    pose_loss = F.mse_loss(my_pose, my_match, reduce=False)
-    pose_loss = pose_loss.sum(1)
-    pose_loss = fposeloss(pose_loss)
-    pose_loss = pose_loss.mean()
+    if true_match == 1: # only train camera pose on matched data
+        pose_loss = F.mse_loss(my_pose, my_match, reduce=False)
+        pose_loss = pose_loss.sum(1)
+        pose_loss = fposeloss(pose_loss)
+        pose_loss = pose_loss.mean()
+    else:
+        pose_loss = 0
     match_loss = F.cross_entropy(my_match, true_match)
     return pose_loss + factor * match_loss
+
+
+if __name__ == "__main__":
+
+    net = LearnNet()
+
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    net.to(device)
+
+    optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+    scheduler = lr_scheduler.StepLR(optimizer, step_size=60000, gamma=0.1)
+
+    trainloader = TrainLoader()
+
+    for i, data in enumerate(trainloader):
+        inputs, answers = data
+        true_pose, true_match = answers
+        inputs = inputs.to(device)
+        true_pose = true_pose.to(device)
+        true_match = true_match.to(device)
+
+        optimizer.zero_grad()
+
+        my_pose, my_match = net(inputs)
+
+        loss = joint_loss(my_pose, my_match, true_pos, true_match)
+        loss.backward()
+
+        optimizer.step()
+        scheduler.step()
