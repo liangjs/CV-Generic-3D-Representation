@@ -16,7 +16,7 @@ import itertools
 import warnings
 warnings.filterwarnings("ignore")
 
-from dataloader import *
+from repr0loader import *
 
 
 class ReprNet(nn.Module):
@@ -67,7 +67,7 @@ class LearnNet(nn.Module):
     def __init__(self):
         super(LearnNet, self).__init__()
         self.cnet = CompdNet()
-        self.fc_pose = nn.Linear(500, 6)
+        self.fc_pose = nn.Linear(500, 3)
         self.fc_match = nn.Linear(500, 2)
 
     def forward(self, x):
@@ -101,8 +101,8 @@ fposeloss = FPoseLoss.apply
 def joint_loss(my_pose, my_match, true_pose, true_match):
     global fposeloss
     factor = 1
-    if true_match == 1: # only train camera pose on matched data
-        pose_loss = F.mse_loss(my_pose, my_match, reduce=False)
+    if true_match.sum() >= 1: # only train camera pose on matched data
+        pose_loss = F.mse_loss(my_pose[true_match], true_pose[true_match], reduce=False)
         pose_loss = pose_loss.sum(1)
         pose_loss = fposeloss(pose_loss)
         pose_loss = pose_loss.mean()
@@ -115,16 +115,24 @@ def joint_loss(my_pose, my_match, true_pose, true_match):
 if __name__ == "__main__":
 
     net = LearnNet()
+    # net.load_state_dict(torch.load('.pkl'))
+    # print('load parameters')
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     net.to(device)
+    print("device:", device)
 
     optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
     scheduler = lr_scheduler.StepLR(optimizer, step_size=60000, gamma=0.1)
 
-    trainloader = TrainLoader()
+    trainloader = TrainLoader(shuffleTar=False, keepTar=True)
+
+    output_period = 100
+    acc_loss = torch.zeros(1)
 
     for i, data in enumerate(trainloader):
+        #print("train counter: ", i)
+
         inputs, answers = data
         true_pose, true_match = answers
         inputs = inputs.to(device)
@@ -135,8 +143,18 @@ if __name__ == "__main__":
 
         my_pose, my_match = net(inputs)
 
-        loss = joint_loss(my_pose, my_match, true_pos, true_match)
+        loss = joint_loss(my_pose, my_match, true_pose, true_match)
         loss.backward()
 
         optimizer.step()
         scheduler.step()
+
+        acc_loss += loss
+        if (i+1) % output_period == 0:
+            print('step:', i)
+            print('acc_loss:', acc_loss.tolist()[0] / output_period)
+            acc_loss = torch.zeros(1)
+
+        if (i+1) % 10000 == 0:
+            torch.save(net.state_dict(), 'repr0-%d.pkl' % i)
+            print('saved repr0-%d.pkl' % i)
