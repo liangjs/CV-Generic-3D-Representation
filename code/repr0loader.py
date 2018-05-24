@@ -1,4 +1,5 @@
 import os
+import shutil
 import sys
 import requests
 from contextlib import closing
@@ -91,7 +92,11 @@ class SceneDataset(Dataset):
         if not os.access(self.path, os.R_OK):
             download_url('https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/%04d.tar' % datasetID, self.path)
 
-        #extract_tar(self.path, self.dname)
+        extract_tar(self.path, self.dname)
+        if not self.keepTar:
+            print('delete %s' % self.path)
+            os.remove(self.path)
+
         self.dname = os.path.join(self.dname, '%04d' % datasetID)
 
         data = {}
@@ -113,6 +118,8 @@ class SceneDataset(Dataset):
                 unmatch_data.append(bnames.pop())
             for i in range(0, len(bnames), 2):
                 match_pairs.append((bnames[i], bnames[i + 1]))
+        if len(unmatch_data) % 2 == 1:
+            unmatch_data.pop()
         for i in range(0, len(unmatch_data), 2):
             unmatch_pairs.append((unmatch_data[i], unmatch_data[i + 1]))
 
@@ -146,8 +153,8 @@ class SceneDataset(Dataset):
 
     def __del__(self):
         if not self.keepTar:
-            print('delete %s' % self.path)
-            os.remove(self.path)
+            print('delete %s' % self.dname)
+            shutil.rmtree(self.dname)
 
 
 class TrainLoader:
@@ -176,6 +183,6 @@ class TrainLoader:
                 if len(self.ids) == 0:
                     raise StopIteration
                 dataset = SceneDataset(self.ids.pop(), keepTar=self.keepTar)
-                self.loader = DataLoader(dataset, batch_size=5, shuffle=True, num_workers=0)
-                #self.loader = DataLoader(dataset, batch_size=256, shuffle=self.shuffle, num_workers=8)
+                #self.loader = DataLoader(dataset, batch_size=5, shuffle=True, num_workers=0)
+                self.loader = DataLoader(dataset, batch_size=256, shuffle=True, num_workers=2)
                 self.it = iter(self.loader)
