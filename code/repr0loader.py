@@ -11,8 +11,11 @@ from PIL import Image
 
 
 def download_url(url, file_name):
-    os.system('wget -O %s %s' % (file_name, url))
-#    print('downloading %s to %s ...' % (url, file_name))
+    print('downloading %s to %s ...' % (url, file_name))
+    sys.stdout.flush()
+    os.system('wget -q -O %s %s' % (file_name, url))
+    print('download %s finish' % url)
+    sys.stdout.flush()
 #    with closing(requests.get(url, stream=True)) as response:
 #        chunk_size = 4096
 #        content_size = int(response.headers['content-length'])
@@ -28,16 +31,20 @@ def download_url(url, file_name):
 
 def extract_tar(fname, dname):
     print('extracting %s to %s ...' % (fname, dname))
+    sys.stdout.flush()
     os.system('mkdir -p %s' % dname)
-    os.system('bar %s | tar xz -C %s' % (fname, dname))
+    os.system('tar xzf %s -C %s' % (fname, dname))
     print('extract %s finish' % fname)
+    sys.stdout.flush()
 
 
 imgtrans = transforms.Compose([
     transforms.Resize(101),
     transforms.ToTensor()])
-pose_mean = torch.Tensor([6.4316, 16.2672, 24.5792])
-pose_std = torch.Tensor([0.7120, 4.8770, 107.5853])
+#pose_mean = torch.Tensor([6.4316, 16.2672, 24.5792])
+#pose_std = torch.Tensor([0.7120, 4.8770, 107.5853])
+pose_mean = torch.Tensor([0, 16.2672, 24.5792])
+pose_std = torch.Tensor([1, 4.8770, 107.5853])
 patch_size0 = 192
 
 #stat_n = 0
@@ -58,6 +65,7 @@ def read_data(dname, fname):
     #d[5:8] # Target Point
     #d[10:13] # Street View Location
     distance = float(d[13]) # Distance to Target
+    distance = 0 # don't train distance!!!!!!!!!!!!!!!!!!
     camera_pose = tuple((float(i) for i in d[14:17])) # Heading, Pitch, Roll
     camera_pose = camera_pose[:-1] # Roll is always zero
     if a is None:
@@ -86,16 +94,13 @@ class SceneDataset(Dataset):
         super(SceneDataset, self).__init__()
         self.datasetID = datasetID
         self.keepTar = keepTar
-        self.path = "../data/%04d.tar" % datasetID
+        self.path = "../data/disk/%04d.tar" % datasetID
         self.dname = os.path.dirname(os.path.abspath(self.path))
 
         if not os.access(self.path, os.R_OK):
             download_url('https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/%04d.tar' % datasetID, self.path)
 
         extract_tar(self.path, self.dname)
-        if not self.keepTar:
-            print('delete %s' % self.path)
-            os.remove(self.path)
 
         self.dname = os.path.join(self.dname, '%04d' % datasetID)
 
@@ -128,8 +133,8 @@ class SceneDataset(Dataset):
         while len(match_pairs) > len(unmatch_pairs) + 4 and len(match_pairs) > 2:
             p1 = match_pairs.pop()
             p2 = match_pairs.pop()
-            unmatch_data.append((p1[0], p2[1]))
-            unmatch_data.append((p1[1], p2[0]))
+            unmatch_pairs.append((p1[0], p2[1]))
+            unmatch_pairs.append((p1[1], p2[0]))
 
         self.pairs = []
         for i in match_pairs:
@@ -145,8 +150,12 @@ class SceneDataset(Dataset):
     def __getitem__(self, idx):
         match = self.pairs[idx][0]
         name1, name2 = self.pairs[idx][1]
-        img1, pose1 = read_data(self.dname, name1)
-        img2, pose2 = read_data(self.dname, name2)
+        try:
+            img1, pose1 = read_data(self.dname, name1)
+            img2, pose2 = read_data(self.dname, name2)
+        except BaseException as e:
+            print('invalid data:', e)
+            return (torch.Tensor(6,101,101), (torch.Tensor(3), -1))
         imgc = torch.cat((img1, img2))
         pose = pose1 - pose2
         return (imgc, (pose, match))
@@ -155,6 +164,8 @@ class SceneDataset(Dataset):
         if not self.keepTar:
             print('delete %s' % self.dname)
             shutil.rmtree(self.dname)
+            print('delete %s' % self.path)
+            os.remove(self.path)
 
 
 class TrainLoader:
@@ -178,11 +189,45 @@ class TrainLoader:
             try:
                 if self.it is None:
                     raise StopIteration
+                #print('next loader iteration')
                 return next(self.it)
             except StopIteration:
                 if len(self.ids) == 0:
                     raise StopIteration
                 dataset = SceneDataset(self.ids.pop(), keepTar=self.keepTar)
                 #self.loader = DataLoader(dataset, batch_size=5, shuffle=True, num_workers=0)
-                self.loader = DataLoader(dataset, batch_size=256, shuffle=True, num_workers=2)
+                self.loader = DataLoader(dataset, batch_size=32, shuffle=True, num_workers=16)
                 self.it = iter(self.loader)
+
+
+class TestDataset(Dataset):
+
+    def __init__(self):
+        super(TestDataset, self).__init__()
+        self.dname = '../data/disk/verTest/'
+        f = open(os.path.join(self.dname, 'verpairs.txt'), 'r')
+        self.data = [line.split() for line in f.readlines()]
+        f.close()
+        self.dname = os.path.join(self.dname, 'data')
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        img1, img2 = self.data[idx][0:2]
+        img1 = os.path.join(self.dname, img1 + '_p.jpg')
+        img2 = os.path.join(self.dname, img2 + '_p.jpg')
+        try:
+            img1 = Image.open(img1)
+            img2 = Image.open(img2)
+        except BaseException as e:
+            print('invalid test data:', e)
+            return (torch.Tensor(6,101,101), (torch.Tensor(3), -1))
+        img1 = imgtrans(img1)
+        img2 = imgtrans(img2)
+        imgc = torch.cat((img1, img2))
+        match = int(self.data[idx][2])
+        camera_pose = [float(i) for i in self.data[idx][3:5]]
+        distance = 0
+        pose = torch.Tensor([distance, camera_pose[0], camera_pose[1]])
+        return (imgc, (pose, match))

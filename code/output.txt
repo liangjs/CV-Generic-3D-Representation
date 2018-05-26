@@ -1,0 +1,1442 @@
+load parameters
+device: cuda:0
+acc_pose:31.26, acc_match:0.56
+epoch: 0
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0068.tar to ../data/disk/0068.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0068.tar finish
+extracting ../data/disk/0068.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0068.tar finish
+load dataset 0068 finish
+step:100, acc_loss:3.38
+step:200, acc_loss:3.39
+step:300, acc_loss:3.25
+step:400, acc_loss:3.17
+step:500, acc_loss:3.38
+step:600, acc_loss:3.30
+step:700, acc_loss:3.28
+step:800, acc_loss:3.33
+step:900, acc_loss:3.10
+step:1000, acc_loss:3.15
+acc_pose:35.17, acc_match:0.65
+step:1100, acc_loss:3.18
+step:1200, acc_loss:3.21
+step:1300, acc_loss:3.40
+step:1400, acc_loss:3.30
+step:1500, acc_loss:3.56
+step:1600, acc_loss:3.34
+step:1700, acc_loss:3.27
+step:1800, acc_loss:3.29
+step:1900, acc_loss:3.12
+step:2000, acc_loss:3.45
+acc_pose:38.15, acc_match:0.65
+step:2100, acc_loss:3.19
+step:2200, acc_loss:3.23
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0003.tar to ../data/disk/0003.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0003.tar finish
+extracting ../data/disk/0003.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0003.tar finish
+load dataset 0003 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0068
+delete ../data/disk/0068.tar
+step:2300, acc_loss:4.20
+step:2400, acc_loss:4.11
+step:2500, acc_loss:3.97
+step:2600, acc_loss:4.20
+step:2700, acc_loss:4.05
+step:2800, acc_loss:4.16
+step:2900, acc_loss:4.03
+step:3000, acc_loss:4.41
+acc_pose:38.23, acc_match:0.70
+step:3100, acc_loss:4.05
+step:3200, acc_loss:4.10
+step:3300, acc_loss:3.92
+step:3400, acc_loss:4.08
+step:3500, acc_loss:3.93
+step:3600, acc_loss:4.02
+step:3700, acc_loss:3.97
+step:3800, acc_loss:4.12
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0069.tar to ../data/disk/0069.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0069.tar finish
+extracting ../data/disk/0069.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0069.tar finish
+load dataset 0069 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0003
+delete ../data/disk/0003.tar
+step:3900, acc_loss:3.98
+step:4000, acc_loss:3.29
+acc_pose:37.33, acc_match:0.64
+step:4100, acc_loss:3.28
+step:4200, acc_loss:3.26
+step:4300, acc_loss:3.15
+step:4400, acc_loss:3.24
+step:4500, acc_loss:3.07
+step:4600, acc_loss:3.33
+step:4700, acc_loss:3.33
+step:4800, acc_loss:3.18
+step:4900, acc_loss:3.19
+step:5000, acc_loss:3.27
+acc_pose:38.70, acc_match:0.66
+step:5100, acc_loss:3.23
+step:5200, acc_loss:3.22
+step:5300, acc_loss:3.14
+step:5400, acc_loss:3.22
+step:5500, acc_loss:3.23
+step:5600, acc_loss:3.40
+step:5700, acc_loss:3.31
+step:5800, acc_loss:3.26
+step:5900, acc_loss:3.07
+step:6000, acc_loss:3.15
+acc_pose:32.70, acc_match:0.61
+step:6100, acc_loss:3.28
+step:6200, acc_loss:3.32
+step:6300, acc_loss:3.15
+step:6400, acc_loss:3.15
+step:6500, acc_loss:3.29
+step:6600, acc_loss:3.11
+step:6700, acc_loss:3.20
+step:6800, acc_loss:3.10
+step:6900, acc_loss:3.19
+step:7000, acc_loss:3.24
+acc_pose:31.25, acc_match:0.61
+step:7100, acc_loss:3.02
+step:7200, acc_loss:3.16
+step:7300, acc_loss:3.25
+step:7400, acc_loss:3.24
+step:7500, acc_loss:3.30
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0030.tar to ../data/disk/0030.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0069/0000069_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0069/0000069_0000001_0000002_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0030.tar finish
+extracting ../data/disk/0030.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0030.tar finish
+load dataset 0030 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0069
+delete ../data/disk/0069.tar
+step:7600, acc_loss:3.62
+step:7700, acc_loss:4.07
+step:7800, acc_loss:4.04
+step:7900, acc_loss:4.11
+step:8000, acc_loss:4.00
+acc_pose:43.89, acc_match:0.72
+step:8100, acc_loss:3.99
+step:8200, acc_loss:3.97
+step:8300, acc_loss:4.13
+step:8400, acc_loss:4.01
+step:8500, acc_loss:4.10
+step:8600, acc_loss:3.98
+step:8700, acc_loss:4.12
+step:8800, acc_loss:4.09
+step:8900, acc_loss:4.00
+step:9000, acc_loss:4.00
+acc_pose:33.75, acc_match:0.72
+step:9100, acc_loss:4.15
+step:9200, acc_loss:3.72
+step:9300, acc_loss:4.00
+step:9400, acc_loss:3.92
+step:9500, acc_loss:4.23
+step:9600, acc_loss:3.94
+step:9700, acc_loss:4.03
+step:9800, acc_loss:3.85
+step:9900, acc_loss:4.03
+step:10000, acc_loss:4.04
+acc_pose:36.31, acc_match:0.68
+saved repr0-10000.pkl
+step:10100, acc_loss:3.79
+step:10200, acc_loss:4.15
+step:10300, acc_loss:4.08
+step:10400, acc_loss:3.93
+step:10500, acc_loss:4.12
+step:10600, acc_loss:3.86
+step:10700, acc_loss:3.93
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0024.tar to ../data/disk/0024.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0030/0000030_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0030/0000030_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0030/0000030_0000003_0000004_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0024.tar finish
+extracting ../data/disk/0024.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0024.tar finish
+load dataset 0024 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0030
+delete ../data/disk/0030.tar
+step:10800, acc_loss:4.01
+step:10900, acc_loss:4.08
+step:11000, acc_loss:4.14
+acc_pose:28.88, acc_match:0.71
+step:11100, acc_loss:4.04
+step:11200, acc_loss:4.16
+step:11300, acc_loss:4.25
+step:11400, acc_loss:4.20
+step:11500, acc_loss:4.35
+step:11600, acc_loss:4.11
+step:11700, acc_loss:4.21
+step:11800, acc_loss:4.14
+step:11900, acc_loss:4.15
+step:12000, acc_loss:4.03
+acc_pose:35.25, acc_match:0.68
+step:12100, acc_loss:4.09
+step:12200, acc_loss:4.29
+step:12300, acc_loss:4.04
+step:12400, acc_loss:4.07
+step:12500, acc_loss:4.17
+step:12600, acc_loss:4.15
+step:12700, acc_loss:4.19
+step:12800, acc_loss:4.09
+step:12900, acc_loss:4.02
+step:13000, acc_loss:4.13
+acc_pose:52.39, acc_match:0.72
+step:13100, acc_loss:4.21
+step:13200, acc_loss:4.25
+step:13300, acc_loss:4.12
+step:13400, acc_loss:4.26
+step:13500, acc_loss:4.21
+step:13600, acc_loss:4.22
+step:13700, acc_loss:4.22
+step:13800, acc_loss:4.33
+step:13900, acc_loss:4.13
+step:14000, acc_loss:3.95
+acc_pose:35.81, acc_match:0.66
+step:14100, acc_loss:4.17
+step:14200, acc_loss:3.99
+step:14300, acc_loss:4.04
+step:14400, acc_loss:4.16
+step:14500, acc_loss:4.05
+step:14600, acc_loss:4.11
+step:14700, acc_loss:4.22
+step:14800, acc_loss:4.15
+step:14900, acc_loss:3.99
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0076.tar to ../data/disk/0076.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0024/0000024_0295521_0000004_0047770.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0076.tar finish
+extracting ../data/disk/0076.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0076.tar finish
+load dataset 0076 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0024
+delete ../data/disk/0024.tar
+step:15000, acc_loss:3.39
+acc_pose:33.19, acc_match:0.69
+step:15100, acc_loss:3.27
+step:15200, acc_loss:3.23
+step:15300, acc_loss:3.23
+step:15400, acc_loss:3.34
+step:15500, acc_loss:3.24
+step:15600, acc_loss:3.06
+step:15700, acc_loss:3.18
+step:15800, acc_loss:3.08
+step:15900, acc_loss:3.14
+step:16000, acc_loss:3.24
+acc_pose:32.75, acc_match:0.59
+step:16100, acc_loss:3.15
+step:16200, acc_loss:3.23
+step:16300, acc_loss:3.36
+step:16400, acc_loss:3.28
+step:16500, acc_loss:3.00
+step:16600, acc_loss:3.03
+step:16700, acc_loss:3.15
+step:16800, acc_loss:3.18
+step:16900, acc_loss:3.20
+step:17000, acc_loss:3.22
+acc_pose:33.66, acc_match:0.64
+step:17100, acc_loss:3.14
+step:17200, acc_loss:3.28
+step:17300, acc_loss:3.10
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0009.tar to ../data/disk/0009.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0076/0000076_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0076/0000076_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0076/0000076_0000001_0000002_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0009.tar finish
+extracting ../data/disk/0009.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0009.tar finish
+load dataset 0009 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0076
+delete ../data/disk/0076.tar
+step:17400, acc_loss:3.81
+step:17500, acc_loss:4.11
+step:17600, acc_loss:3.98
+step:17700, acc_loss:4.08
+step:17800, acc_loss:4.05
+step:17900, acc_loss:3.93
+step:18000, acc_loss:4.05
+acc_pose:37.11, acc_match:0.63
+step:18100, acc_loss:4.29
+step:18200, acc_loss:4.14
+step:18300, acc_loss:4.02
+step:18400, acc_loss:4.20
+step:18500, acc_loss:4.12
+step:18600, acc_loss:4.24
+step:18700, acc_loss:4.15
+step:18800, acc_loss:4.03
+step:18900, acc_loss:4.02
+step:19000, acc_loss:4.12
+acc_pose:34.25, acc_match:0.52
+step:19100, acc_loss:3.80
+step:19200, acc_loss:4.17
+step:19300, acc_loss:4.08
+step:19400, acc_loss:4.33
+step:19500, acc_loss:4.17
+step:19600, acc_loss:4.14
+step:19700, acc_loss:4.00
+step:19800, acc_loss:4.04
+step:19900, acc_loss:4.08
+step:20000, acc_loss:4.00
+acc_pose:31.24, acc_match:0.63
+saved repr0-20000.pkl
+step:20100, acc_loss:3.98
+step:20200, acc_loss:4.04
+step:20300, acc_loss:4.32
+step:20400, acc_loss:4.22
+step:20500, acc_loss:3.95
+step:20600, acc_loss:4.14
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0009/0000009_0221767_0000001_0039304.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0020.tar to ../data/disk/0020.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0009/0000009_0000002_0000003_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0020.tar finish
+extracting ../data/disk/0020.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0020.tar finish
+load dataset 0020 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0009
+delete ../data/disk/0009.tar
+step:20700, acc_loss:3.92
+step:20800, acc_loss:4.15
+step:20900, acc_loss:4.25
+step:21000, acc_loss:4.04
+acc_pose:43.96, acc_match:0.66
+step:21100, acc_loss:4.16
+step:21200, acc_loss:4.16
+step:21300, acc_loss:4.22
+step:21400, acc_loss:3.88
+step:21500, acc_loss:4.14
+step:21600, acc_loss:4.06
+step:21700, acc_loss:4.32
+step:21800, acc_loss:3.93
+step:21900, acc_loss:4.28
+step:22000, acc_loss:4.17
+acc_pose:29.45, acc_match:0.66
+step:22100, acc_loss:4.01
+step:22200, acc_loss:4.00
+step:22300, acc_loss:4.26
+step:22400, acc_loss:3.87
+step:22500, acc_loss:4.05
+step:22600, acc_loss:4.15
+step:22700, acc_loss:4.11
+step:22800, acc_loss:4.16
+step:22900, acc_loss:3.88
+step:23000, acc_loss:4.09
+acc_pose:37.79, acc_match:0.65
+step:23100, acc_loss:3.93
+step:23200, acc_loss:4.18
+step:23300, acc_loss:4.03
+step:23400, acc_loss:3.97
+step:23500, acc_loss:4.01
+step:23600, acc_loss:4.07
+step:23700, acc_loss:4.08
+step:23800, acc_loss:4.09
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0070.tar to ../data/disk/0070.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0070.tar finish
+extracting ../data/disk/0070.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0070.tar finish
+load dataset 0070 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0020
+delete ../data/disk/0020.tar
+step:23900, acc_loss:3.35
+step:24000, acc_loss:3.03
+acc_pose:41.41, acc_match:0.68
+step:24100, acc_loss:3.16
+step:24200, acc_loss:3.19
+step:24300, acc_loss:3.19
+step:24400, acc_loss:3.34
+step:24500, acc_loss:3.30
+step:24600, acc_loss:3.40
+step:24700, acc_loss:3.01
+step:24800, acc_loss:3.37
+step:24900, acc_loss:3.23
+step:25000, acc_loss:3.41
+acc_pose:40.34, acc_match:0.43
+step:25100, acc_loss:3.13
+step:25200, acc_loss:3.42
+step:25300, acc_loss:3.12
+step:25400, acc_loss:3.03
+step:25500, acc_loss:3.30
+step:25600, acc_loss:3.14
+step:25700, acc_loss:3.25
+step:25800, acc_loss:3.27
+step:25900, acc_loss:3.32
+step:26000, acc_loss:3.22
+acc_pose:31.16, acc_match:0.63
+step:26100, acc_loss:3.18
+step:26200, acc_loss:3.32
+step:26300, acc_loss:3.31
+step:26400, acc_loss:3.14
+step:26500, acc_loss:3.14
+step:26600, acc_loss:3.17
+step:26700, acc_loss:3.30
+step:26800, acc_loss:3.27
+step:26900, acc_loss:3.23
+step:27000, acc_loss:3.43
+acc_pose:28.33, acc_match:0.64
+step:27100, acc_loss:3.23
+step:27200, acc_loss:3.14
+step:27300, acc_loss:3.15
+step:27400, acc_loss:3.17
+step:27500, acc_loss:3.21
+step:27600, acc_loss:3.37
+step:27700, acc_loss:3.22
+step:27800, acc_loss:3.18
+step:27900, acc_loss:3.21
+step:28000, acc_loss:3.05
+acc_pose:34.53, acc_match:0.62
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0070/0000070_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0070/0000070_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0070/0000070_0000005_0000006_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0070/0000070_0000006_0000007_0000001.txt'
+invalid data: cannot identify image file '/root/CV-Generic-3D-Representation/data/disk/0070/0000070_0017009_0000001_0003025.jpg'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0081.tar to ../data/disk/0081.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0081.tar finish
+extracting ../data/disk/0081.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0081.tar finish
+load dataset 0081 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0070
+delete ../data/disk/0070.tar
+step:28100, acc_loss:3.26
+step:28200, acc_loss:3.35
+step:28300, acc_loss:3.13
+step:28400, acc_loss:3.33
+step:28500, acc_loss:3.14
+step:28600, acc_loss:3.22
+step:28700, acc_loss:3.28
+step:28800, acc_loss:3.27
+step:28900, acc_loss:3.23
+step:29000, acc_loss:3.12
+acc_pose:33.64, acc_match:0.41
+step:29100, acc_loss:3.26
+step:29200, acc_loss:3.12
+step:29300, acc_loss:3.32
+step:29400, acc_loss:3.25
+step:29500, acc_loss:3.17
+step:29600, acc_loss:3.37
+step:29700, acc_loss:3.25
+step:29800, acc_loss:3.10
+step:29900, acc_loss:3.33
+step:30000, acc_loss:3.34
+acc_pose:32.39, acc_match:0.40
+saved repr0-30000.pkl
+step:30100, acc_loss:3.29
+step:30200, acc_loss:3.29
+step:30300, acc_loss:3.27
+step:30400, acc_loss:3.26
+step:30500, acc_loss:3.31
+step:30600, acc_loss:3.17
+step:30700, acc_loss:3.22
+step:30800, acc_loss:3.22
+step:30900, acc_loss:3.23
+step:31000, acc_loss:3.05
+acc_pose:36.85, acc_match:0.55
+step:31100, acc_loss:3.08
+step:31200, acc_loss:3.35
+step:31300, acc_loss:3.25
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0081/0000081_0000008_0000009_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0081/0000081_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0081/0000081_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0081/0000081_0000005_0000006_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0081/0000081_0000006_0000007_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0081/0000081_0000007_0000008_0000001.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0014.tar to ../data/disk/0014.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0014.tar finish
+extracting ../data/disk/0014.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0014.tar finish
+load dataset 0014 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0081
+delete ../data/disk/0081.tar
+step:31400, acc_loss:4.15
+step:31500, acc_loss:3.97
+step:31600, acc_loss:4.12
+step:31700, acc_loss:4.33
+step:31800, acc_loss:4.24
+step:31900, acc_loss:4.15
+step:32000, acc_loss:4.09
+acc_pose:38.30, acc_match:0.75
+step:32100, acc_loss:4.25
+step:32200, acc_loss:4.18
+step:32300, acc_loss:3.98
+step:32400, acc_loss:4.08
+step:32500, acc_loss:4.10
+step:32600, acc_loss:4.02
+step:32700, acc_loss:4.11
+step:32800, acc_loss:4.23
+step:32900, acc_loss:4.14
+step:33000, acc_loss:4.01
+acc_pose:36.56, acc_match:0.71
+step:33100, acc_loss:3.85
+step:33200, acc_loss:4.31
+step:33300, acc_loss:4.47
+step:33400, acc_loss:4.17
+step:33500, acc_loss:4.26
+step:33600, acc_loss:4.06
+step:33700, acc_loss:4.21
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0014/0000014_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0014/0000014_0000006_0000007_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0014/0000014_0000001_0000002_0000001.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0079.tar to ../data/disk/0079.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0079.tar finish
+extracting ../data/disk/0079.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0079.tar finish
+load dataset 0079 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0014
+delete ../data/disk/0014.tar
+step:33800, acc_loss:3.54
+step:33900, acc_loss:3.40
+step:34000, acc_loss:3.25
+acc_pose:39.55, acc_match:0.71
+step:34100, acc_loss:3.34
+step:34200, acc_loss:3.37
+step:34300, acc_loss:3.37
+step:34400, acc_loss:3.47
+step:34500, acc_loss:3.32
+step:34600, acc_loss:3.32
+step:34700, acc_loss:3.27
+step:34800, acc_loss:3.47
+step:34900, acc_loss:3.53
+step:35000, acc_loss:3.33
+acc_pose:30.50, acc_match:0.57
+step:35100, acc_loss:3.20
+step:35200, acc_loss:3.36
+step:35300, acc_loss:3.32
+step:35400, acc_loss:3.24
+step:35500, acc_loss:3.38
+step:35600, acc_loss:3.35
+step:35700, acc_loss:3.32
+step:35800, acc_loss:3.55
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0079/0000079_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0079/0000079_0000001_0000002_0000001.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0075.tar to ../data/disk/0075.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0079/0000079_0000003_0000004_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0075.tar finish
+extracting ../data/disk/0075.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0075.tar finish
+load dataset 0075 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0079
+delete ../data/disk/0079.tar
+step:35900, acc_loss:3.28
+step:36000, acc_loss:3.17
+acc_pose:36.28, acc_match:0.61
+step:36100, acc_loss:3.36
+step:36200, acc_loss:3.43
+step:36300, acc_loss:3.16
+step:36400, acc_loss:3.19
+step:36500, acc_loss:3.07
+step:36600, acc_loss:3.32
+step:36700, acc_loss:3.15
+step:36800, acc_loss:3.35
+step:36900, acc_loss:3.22
+step:37000, acc_loss:3.32
+acc_pose:44.14, acc_match:0.66
+step:37100, acc_loss:3.14
+step:37200, acc_loss:3.15
+step:37300, acc_loss:3.12
+step:37400, acc_loss:3.30
+step:37500, acc_loss:3.35
+step:37600, acc_loss:3.08
+step:37700, acc_loss:3.18
+step:37800, acc_loss:3.17
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0033.tar to ../data/disk/0033.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0075/0000075_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0075/0000075_0000001_0000002_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0033.tar finish
+extracting ../data/disk/0033.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0033.tar finish
+load dataset 0033 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0075
+delete ../data/disk/0075.tar
+step:37900, acc_loss:3.31
+step:38000, acc_loss:4.18
+acc_pose:28.86, acc_match:0.68
+step:38100, acc_loss:3.96
+step:38200, acc_loss:4.22
+step:38300, acc_loss:4.48
+step:38400, acc_loss:4.16
+step:38500, acc_loss:4.09
+step:38600, acc_loss:4.01
+step:38700, acc_loss:4.07
+step:38800, acc_loss:4.25
+step:38900, acc_loss:4.07
+step:39000, acc_loss:4.18
+acc_pose:40.37, acc_match:0.69
+step:39100, acc_loss:4.21
+step:39200, acc_loss:4.18
+step:39300, acc_loss:4.09
+step:39400, acc_loss:3.95
+step:39500, acc_loss:4.16
+step:39600, acc_loss:4.00
+step:39700, acc_loss:4.07
+step:39800, acc_loss:4.06
+step:39900, acc_loss:4.24
+step:40000, acc_loss:4.12
+acc_pose:32.55, acc_match:0.66
+saved repr0-40000.pkl
+step:40100, acc_loss:4.11
+step:40200, acc_loss:4.22
+step:40300, acc_loss:4.06
+step:40400, acc_loss:4.16
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0033/0000033_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0033/0000033_0000005_0000006_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0033/0000033_0000002_0000003_0000001.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0067.tar to ../data/disk/0067.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0033/0000033_0000001_0000002_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0067.tar finish
+extracting ../data/disk/0067.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0067.tar finish
+load dataset 0067 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0033
+delete ../data/disk/0033.tar
+step:40500, acc_loss:3.29
+step:40600, acc_loss:3.30
+step:40700, acc_loss:3.25
+step:40800, acc_loss:3.11
+step:40900, acc_loss:3.26
+step:41000, acc_loss:3.21
+acc_pose:39.49, acc_match:0.57
+step:41100, acc_loss:3.13
+step:41200, acc_loss:3.17
+step:41300, acc_loss:3.23
+step:41400, acc_loss:3.21
+step:41500, acc_loss:3.32
+step:41600, acc_loss:3.35
+step:41700, acc_loss:3.22
+step:41800, acc_loss:3.16
+step:41900, acc_loss:3.13
+step:42000, acc_loss:3.33
+acc_pose:32.36, acc_match:0.71
+step:42100, acc_loss:3.27
+step:42200, acc_loss:3.12
+step:42300, acc_loss:3.32
+step:42400, acc_loss:3.20
+step:42500, acc_loss:3.15
+step:42600, acc_loss:3.21
+step:42700, acc_loss:3.21
+step:42800, acc_loss:3.00
+step:42900, acc_loss:3.23
+step:43000, acc_loss:3.19
+acc_pose:33.33, acc_match:0.52
+step:43100, acc_loss:3.19
+step:43200, acc_loss:3.15
+step:43300, acc_loss:3.17
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0036.tar to ../data/disk/0036.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0036.tar finish
+extracting ../data/disk/0036.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0036.tar finish
+load dataset 0036 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0067
+delete ../data/disk/0067.tar
+step:43400, acc_loss:3.68
+step:43500, acc_loss:4.20
+step:43600, acc_loss:4.19
+step:43700, acc_loss:4.24
+step:43800, acc_loss:4.08
+step:43900, acc_loss:4.34
+step:44000, acc_loss:4.23
+acc_pose:39.64, acc_match:0.46
+step:44100, acc_loss:4.30
+step:44200, acc_loss:4.14
+step:44300, acc_loss:4.28
+step:44400, acc_loss:4.14
+step:44500, acc_loss:3.92
+step:44600, acc_loss:4.02
+step:44700, acc_loss:4.00
+step:44800, acc_loss:4.28
+step:44900, acc_loss:4.15
+step:45000, acc_loss:3.92
+acc_pose:31.56, acc_match:0.60
+step:45100, acc_loss:4.17
+step:45200, acc_loss:4.32
+step:45300, acc_loss:4.15
+step:45400, acc_loss:4.10
+step:45500, acc_loss:4.23
+step:45600, acc_loss:4.11
+step:45700, acc_loss:4.22
+step:45800, acc_loss:3.98
+step:45900, acc_loss:4.28
+step:46000, acc_loss:4.20
+acc_pose:40.45, acc_match:0.69
+step:46100, acc_loss:3.97
+step:46200, acc_loss:3.91
+step:46300, acc_loss:3.93
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0028.tar to ../data/disk/0028.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0036/0000036_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0036/0000036_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0036/0000036_0000003_0000004_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0036/0000036_0000005_0000006_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0028.tar finish
+extracting ../data/disk/0028.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0028.tar finish
+load dataset 0028 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0036
+delete ../data/disk/0036.tar
+step:46400, acc_loss:4.42
+step:46500, acc_loss:4.11
+step:46600, acc_loss:4.48
+step:46700, acc_loss:4.43
+step:46800, acc_loss:4.08
+step:46900, acc_loss:4.39
+step:47000, acc_loss:4.18
+acc_pose:33.18, acc_match:0.43
+step:47100, acc_loss:4.55
+step:47200, acc_loss:4.34
+step:47300, acc_loss:4.57
+step:47400, acc_loss:4.29
+step:47500, acc_loss:4.30
+step:47600, acc_loss:4.52
+step:47700, acc_loss:4.20
+step:47800, acc_loss:4.36
+step:47900, acc_loss:4.30
+step:48000, acc_loss:4.48
+acc_pose:35.53, acc_match:0.50
+step:48100, acc_loss:4.58
+step:48200, acc_loss:4.30
+step:48300, acc_loss:4.30
+step:48400, acc_loss:4.32
+step:48500, acc_loss:4.40
+step:48600, acc_loss:4.30
+step:48700, acc_loss:4.25
+step:48800, acc_loss:4.05
+step:48900, acc_loss:4.25
+step:49000, acc_loss:4.20
+acc_pose:30.60, acc_match:0.60
+step:49100, acc_loss:4.27
+step:49200, acc_loss:4.16
+step:49300, acc_loss:4.44
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0012.tar to ../data/disk/0012.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0012.tar finish
+extracting ../data/disk/0012.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0012.tar finish
+load dataset 0012 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0028
+delete ../data/disk/0028.tar
+step:49400, acc_loss:4.01
+step:49500, acc_loss:4.15
+step:49600, acc_loss:4.00
+step:49700, acc_loss:4.12
+step:49800, acc_loss:4.06
+step:49900, acc_loss:4.38
+step:50000, acc_loss:4.19
+acc_pose:31.79, acc_match:0.31
+saved repr0-50000.pkl
+step:50100, acc_loss:4.26
+step:50200, acc_loss:4.27
+step:50300, acc_loss:4.20
+step:50400, acc_loss:4.17
+step:50500, acc_loss:4.05
+step:50600, acc_loss:4.15
+step:50700, acc_loss:4.32
+step:50800, acc_loss:4.16
+step:50900, acc_loss:4.11
+step:51000, acc_loss:4.06
+acc_pose:29.16, acc_match:0.30
+step:51100, acc_loss:4.12
+step:51200, acc_loss:4.09
+step:51300, acc_loss:4.30
+step:51400, acc_loss:4.31
+step:51500, acc_loss:4.35
+step:51600, acc_loss:4.31
+step:51700, acc_loss:4.26
+step:51800, acc_loss:4.27
+step:51900, acc_loss:4.24
+step:52000, acc_loss:4.38
+acc_pose:32.83, acc_match:0.27
+step:52100, acc_loss:4.33
+step:52200, acc_loss:4.22
+step:52300, acc_loss:4.37
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0012/0000012_0266226_0000002_0045840.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0032.tar to ../data/disk/0032.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0032.tar finish
+extracting ../data/disk/0032.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0032.tar finish
+load dataset 0032 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0012
+delete ../data/disk/0012.tar
+step:52400, acc_loss:4.18
+step:52500, acc_loss:4.24
+step:52600, acc_loss:4.22
+step:52700, acc_loss:4.40
+step:52800, acc_loss:4.28
+step:52900, acc_loss:4.02
+step:53000, acc_loss:4.11
+acc_pose:35.56, acc_match:0.30
+step:53100, acc_loss:4.08
+step:53200, acc_loss:4.24
+step:53300, acc_loss:4.14
+step:53400, acc_loss:4.37
+step:53500, acc_loss:4.40
+step:53600, acc_loss:4.10
+step:53700, acc_loss:4.34
+step:53800, acc_loss:4.12
+step:53900, acc_loss:4.31
+step:54000, acc_loss:4.19
+acc_pose:35.93, acc_match:0.70
+step:54100, acc_loss:3.99
+step:54200, acc_loss:4.29
+step:54300, acc_loss:4.36
+step:54400, acc_loss:4.09
+step:54500, acc_loss:4.35
+step:54600, acc_loss:4.28
+step:54700, acc_loss:4.18
+step:54800, acc_loss:3.98
+step:54900, acc_loss:4.32
+step:55000, acc_loss:4.24
+acc_pose:35.21, acc_match:0.28
+step:55100, acc_loss:4.22
+step:55200, acc_loss:4.14
+step:55300, acc_loss:4.10
+step:55400, acc_loss:4.18
+step:55500, acc_loss:4.17
+step:55600, acc_loss:4.42
+step:55700, acc_loss:4.14
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0032/0000032_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0032/0000032_0000006_0000007_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0032/0000032_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0032/0000032_0000004_0000005_0000001.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0090.tar to ../data/disk/0090.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0090.tar finish
+extracting ../data/disk/0090.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0090.tar finish
+load dataset 0090 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0032
+delete ../data/disk/0032.tar
+step:55800, acc_loss:3.40
+step:55900, acc_loss:2.34
+step:56000, acc_loss:2.44
+acc_pose:35.32, acc_match:0.30
+step:56100, acc_loss:2.38
+step:56200, acc_loss:2.50
+step:56300, acc_loss:2.48
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0021.tar to ../data/disk/0021.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0021.tar finish
+extracting ../data/disk/0021.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0021.tar finish
+load dataset 0021 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0090
+delete ../data/disk/0090.tar
+step:56400, acc_loss:3.58
+step:56500, acc_loss:4.18
+step:56600, acc_loss:4.16
+step:56700, acc_loss:4.13
+step:56800, acc_loss:3.99
+step:56900, acc_loss:4.19
+step:57000, acc_loss:4.09
+acc_pose:27.93, acc_match:0.71
+step:57100, acc_loss:4.31
+step:57200, acc_loss:4.33
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0021/0000021_0000006_0000007_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0021/0000021_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0021/0000021_0000003_0000004_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0021/0000021_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0021/0000021_0000004_0000005_0000001.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0025.tar to ../data/disk/0025.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0025.tar finish
+extracting ../data/disk/0025.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0025.tar finish
+load dataset 0025 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0021
+delete ../data/disk/0021.tar
+step:57300, acc_loss:4.18
+step:57400, acc_loss:4.18
+step:57500, acc_loss:4.22
+step:57600, acc_loss:3.97
+step:57700, acc_loss:3.94
+step:57800, acc_loss:4.21
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0080.tar to ../data/disk/0080.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0080.tar finish
+extracting ../data/disk/0080.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0080.tar finish
+load dataset 0080 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0025
+delete ../data/disk/0025.tar
+step:57900, acc_loss:3.26
+step:58000, acc_loss:3.15
+acc_pose:37.88, acc_match:0.31
+step:58100, acc_loss:3.22
+step:58200, acc_loss:3.18
+step:58300, acc_loss:3.26
+step:58400, acc_loss:3.31
+step:58500, acc_loss:3.27
+step:58600, acc_loss:3.29
+step:58700, acc_loss:3.35
+step:58800, acc_loss:3.31
+step:58900, acc_loss:3.33
+step:59000, acc_loss:3.17
+acc_pose:34.13, acc_match:0.73
+step:59100, acc_loss:3.30
+step:59200, acc_loss:3.32
+step:59300, acc_loss:3.34
+step:59400, acc_loss:3.14
+step:59500, acc_loss:3.23
+step:59600, acc_loss:3.25
+step:59700, acc_loss:3.13
+step:59800, acc_loss:3.15
+step:59900, acc_loss:3.14
+step:60000, acc_loss:3.14
+acc_pose:38.97, acc_match:0.69
+saved repr0-60000.pkl
+step:60100, acc_loss:3.27
+step:60200, acc_loss:3.14
+step:60300, acc_loss:3.22
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0072.tar to ../data/disk/0072.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0080/0000080_0000003_0000004_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0080/0000080_0000004_0000005_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0072.tar finish
+extracting ../data/disk/0072.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0072.tar finish
+load dataset 0072 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0080
+delete ../data/disk/0080.tar
+step:60400, acc_loss:3.30
+step:60500, acc_loss:3.16
+step:60600, acc_loss:3.32
+step:60700, acc_loss:3.27
+step:60800, acc_loss:3.27
+step:60900, acc_loss:3.43
+step:61000, acc_loss:3.40
+acc_pose:34.77, acc_match:0.70
+step:61100, acc_loss:3.38
+step:61200, acc_loss:3.52
+step:61300, acc_loss:3.37
+step:61400, acc_loss:3.07
+step:61500, acc_loss:3.42
+step:61600, acc_loss:3.26
+step:61700, acc_loss:3.51
+step:61800, acc_loss:3.48
+step:61900, acc_loss:3.32
+step:62000, acc_loss:3.27
+acc_pose:33.75, acc_match:0.69
+step:62100, acc_loss:3.32
+step:62200, acc_loss:3.31
+step:62300, acc_loss:3.33
+step:62400, acc_loss:3.26
+step:62500, acc_loss:3.26
+step:62600, acc_loss:3.35
+step:62700, acc_loss:3.30
+step:62800, acc_loss:3.21
+step:62900, acc_loss:3.42
+step:63000, acc_loss:3.41
+acc_pose:33.10, acc_match:0.71
+step:63100, acc_loss:3.41
+step:63200, acc_loss:3.41
+step:63300, acc_loss:3.39
+step:63400, acc_loss:3.35
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0073.tar to ../data/disk/0073.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0073.tar finish
+extracting ../data/disk/0073.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0073.tar finish
+load dataset 0073 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0072
+delete ../data/disk/0072.tar
+step:63500, acc_loss:3.47
+step:63600, acc_loss:3.13
+step:63700, acc_loss:3.35
+step:63800, acc_loss:3.45
+step:63900, acc_loss:3.16
+step:64000, acc_loss:3.43
+acc_pose:33.81, acc_match:0.30
+step:64100, acc_loss:3.27
+step:64200, acc_loss:3.45
+step:64300, acc_loss:3.45
+step:64400, acc_loss:3.13
+step:64500, acc_loss:3.28
+step:64600, acc_loss:3.27
+step:64700, acc_loss:3.27
+step:64800, acc_loss:3.36
+step:64900, acc_loss:3.21
+step:65000, acc_loss:3.23
+acc_pose:35.07, acc_match:0.30
+step:65100, acc_loss:3.27
+step:65200, acc_loss:3.29
+step:65300, acc_loss:3.12
+step:65400, acc_loss:3.44
+step:65500, acc_loss:3.34
+step:65600, acc_loss:3.29
+step:65700, acc_loss:3.27
+step:65800, acc_loss:3.30
+step:65900, acc_loss:3.19
+step:66000, acc_loss:3.22
+acc_pose:35.63, acc_match:0.28
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0017.tar to ../data/disk/0017.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0073/0000073_0000006_0000007_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0073/0000073_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0073/0000073_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0073/0000073_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0073/0000073_0000008_0000009_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0073/0000073_0000007_0000008_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0073/0000073_0000005_0000006_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0017.tar finish
+extracting ../data/disk/0017.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0017.tar finish
+load dataset 0017 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0073
+delete ../data/disk/0073.tar
+step:66100, acc_loss:4.03
+step:66200, acc_loss:4.11
+step:66300, acc_loss:4.08
+step:66400, acc_loss:4.27
+step:66500, acc_loss:3.99
+step:66600, acc_loss:4.25
+step:66700, acc_loss:4.11
+step:66800, acc_loss:4.24
+step:66900, acc_loss:4.14
+step:67000, acc_loss:3.98
+acc_pose:34.52, acc_match:0.69
+step:67100, acc_loss:4.31
+step:67200, acc_loss:4.07
+step:67300, acc_loss:4.05
+step:67400, acc_loss:4.03
+step:67500, acc_loss:4.17
+step:67600, acc_loss:4.21
+step:67700, acc_loss:3.96
+step:67800, acc_loss:4.08
+step:67900, acc_loss:4.30
+step:68000, acc_loss:4.30
+acc_pose:33.59, acc_match:0.71
+step:68100, acc_loss:4.10
+step:68200, acc_loss:4.11
+step:68300, acc_loss:4.00
+step:68400, acc_loss:4.22
+step:68500, acc_loss:4.00
+step:68600, acc_loss:4.34
+step:68700, acc_loss:4.11
+step:68800, acc_loss:3.97
+step:68900, acc_loss:4.18
+step:69000, acc_loss:4.02
+acc_pose:34.11, acc_match:0.28
+step:69100, acc_loss:4.23
+step:69200, acc_loss:4.33
+step:69300, acc_loss:4.09
+step:69400, acc_loss:4.30
+step:69500, acc_loss:4.20
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0017/0000017_0000005_0000006_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0017/0000017_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0017/0000017_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0017/0000017_0000006_0000007_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0017/0000017_0000003_0000004_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0017/0000017_0000002_0000003_0000001.txt'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0074.tar to ../data/disk/0074.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0074.tar finish
+extracting ../data/disk/0074.tar to /root/CV-Generic-3D-Representation/data/disk ...
+
+gzip: stdin: invalid compressed data--crc error
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+extract ../data/disk/0074.tar finish
+load dataset 0074 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0017
+delete ../data/disk/0017.tar
+step:69600, acc_loss:3.66
+step:69700, acc_loss:3.22
+step:69800, acc_loss:3.17
+step:69900, acc_loss:3.12
+step:70000, acc_loss:3.46
+acc_pose:31.64, acc_match:0.30
+saved repr0-70000.pkl
+step:70100, acc_loss:3.27
+step:70200, acc_loss:3.39
+step:70300, acc_loss:3.41
+step:70400, acc_loss:3.48
+step:70500, acc_loss:3.38
+step:70600, acc_loss:3.29
+step:70700, acc_loss:3.15
+step:70800, acc_loss:3.28
+step:70900, acc_loss:3.38
+step:71000, acc_loss:3.28
+acc_pose:32.01, acc_match:0.28
+step:71100, acc_loss:3.37
+step:71200, acc_loss:3.20
+step:71300, acc_loss:3.33
+step:71400, acc_loss:3.47
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0078.tar to ../data/disk/0078.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0074/0000074_0000001_0000002_0000001.txt'
+invalid data: cannot identify image file '/root/CV-Generic-3D-Representation/data/disk/0074/0000074_0032407_0000014_0003428.jpg'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0078.tar finish
+extracting ../data/disk/0078.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0078.tar finish
+load dataset 0078 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0074
+delete ../data/disk/0074.tar
+step:71500, acc_loss:3.24
+step:71600, acc_loss:3.24
+step:71700, acc_loss:3.28
+step:71800, acc_loss:3.23
+step:71900, acc_loss:3.31
+step:72000, acc_loss:3.30
+acc_pose:31.77, acc_match:0.69
+step:72100, acc_loss:3.30
+step:72200, acc_loss:3.13
+step:72300, acc_loss:3.34
+step:72400, acc_loss:3.23
+step:72500, acc_loss:3.39
+step:72600, acc_loss:3.42
+step:72700, acc_loss:3.33
+step:72800, acc_loss:3.32
+step:72900, acc_loss:3.25
+step:73000, acc_loss:3.17
+acc_pose:31.83, acc_match:0.32
+step:73100, acc_loss:3.24
+step:73200, acc_loss:3.28
+step:73300, acc_loss:3.21
+step:73400, acc_loss:3.39
+step:73500, acc_loss:3.27
+step:73600, acc_loss:3.46
+step:73700, acc_loss:3.32
+step:73800, acc_loss:3.25
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0093.tar to ../data/disk/0093.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000003_0000004_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000007_0000008_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000004_0000005_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000006_0000007_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000009_0000010_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0078/0000078_0000008_0000009_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0093.tar finish
+extracting ../data/disk/0093.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0093.tar finish
+load dataset 0093 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0078
+delete ../data/disk/0078.tar
+step:73900, acc_loss:2.94
+step:74000, acc_loss:2.43
+acc_pose:31.58, acc_match:0.30
+step:74100, acc_loss:2.36
+step:74200, acc_loss:2.27
+step:74300, acc_loss:2.34
+step:74400, acc_loss:2.31
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0031.tar to ../data/disk/0031.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0031.tar finish
+extracting ../data/disk/0031.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0031.tar finish
+load dataset 0031 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0093
+delete ../data/disk/0093.tar
+step:74500, acc_loss:2.38
+step:74600, acc_loss:4.14
+step:74700, acc_loss:4.24
+step:74800, acc_loss:4.35
+step:74900, acc_loss:4.19
+step:75000, acc_loss:4.08
+acc_pose:36.33, acc_match:0.28
+step:75100, acc_loss:4.24
+step:75200, acc_loss:4.32
+step:75300, acc_loss:4.10
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0026.tar to ../data/disk/0026.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0026.tar finish
+extracting ../data/disk/0026.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0026.tar finish
+load dataset 0026 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0031
+delete ../data/disk/0031.tar
+step:75400, acc_loss:4.28
+step:75500, acc_loss:4.11
+step:75600, acc_loss:4.34
+step:75700, acc_loss:4.24
+step:75800, acc_loss:4.42
+step:75900, acc_loss:4.10
+step:76000, acc_loss:4.16
+acc_pose:35.18, acc_match:0.31
+step:76100, acc_loss:4.18
+step:76200, acc_loss:4.28
+step:76300, acc_loss:4.17
+step:76400, acc_loss:4.21
+step:76500, acc_loss:3.98
+step:76600, acc_loss:4.06
+step:76700, acc_loss:4.28
+step:76800, acc_loss:4.41
+step:76900, acc_loss:4.36
+step:77000, acc_loss:4.18
+acc_pose:33.87, acc_match:0.72
+step:77100, acc_loss:4.41
+step:77200, acc_loss:4.24
+step:77300, acc_loss:4.02
+step:77400, acc_loss:4.13
+step:77500, acc_loss:4.30
+step:77600, acc_loss:4.28
+step:77700, acc_loss:4.19
+step:77800, acc_loss:4.21
+step:77900, acc_loss:4.20
+step:78000, acc_loss:4.09
+acc_pose:33.09, acc_match:0.28
+step:78100, acc_loss:4.08
+step:78200, acc_loss:4.15
+step:78300, acc_loss:4.21
+step:78400, acc_loss:4.16
+step:78500, acc_loss:4.05
+step:78600, acc_loss:4.16
+step:78700, acc_loss:4.25
+step:78800, acc_loss:4.24
+step:78900, acc_loss:4.17
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0077.tar to ../data/disk/0077.tar ...
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0026/0000026_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0026/0000026_0000003_0000004_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0026/0000026_0196093_0000002_0029747.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0077.tar finish
+extracting ../data/disk/0077.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0077.tar finish
+load dataset 0077 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0026
+delete ../data/disk/0026.tar
+step:79000, acc_loss:3.94
+acc_pose:33.19, acc_match:0.71
+step:79100, acc_loss:3.37
+step:79200, acc_loss:3.37
+step:79300, acc_loss:3.22
+step:79400, acc_loss:3.29
+step:79500, acc_loss:3.26
+step:79600, acc_loss:3.24
+step:79700, acc_loss:3.27
+step:79800, acc_loss:3.33
+step:79900, acc_loss:3.28
+step:80000, acc_loss:3.11
+acc_pose:35.24, acc_match:0.71
+saved repr0-80000.pkl
+step:80100, acc_loss:3.18
+step:80200, acc_loss:3.27
+step:80300, acc_loss:3.10
+step:80400, acc_loss:3.21
+step:80500, acc_loss:3.17
+step:80600, acc_loss:3.08
+step:80700, acc_loss:3.25
+step:80800, acc_loss:3.31
+step:80900, acc_loss:3.20
+step:81000, acc_loss:3.22
+acc_pose:34.28, acc_match:0.73
+step:81100, acc_loss:3.23
+step:81200, acc_loss:3.27
+step:81300, acc_loss:3.20
+step:81400, acc_loss:3.22
+step:81500, acc_loss:3.27
+step:81600, acc_loss:3.38
+step:81700, acc_loss:3.34
+step:81800, acc_loss:3.37
+step:81900, acc_loss:3.28
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0071.tar to ../data/disk/0071.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0071.tar finish
+extracting ../data/disk/0071.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0071.tar finish
+load dataset 0071 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0077
+delete ../data/disk/0077.tar
+step:82000, acc_loss:3.21
+acc_pose:35.30, acc_match:0.71
+step:82100, acc_loss:3.32
+step:82200, acc_loss:3.22
+step:82300, acc_loss:3.11
+step:82400, acc_loss:3.25
+step:82500, acc_loss:3.08
+step:82600, acc_loss:3.32
+step:82700, acc_loss:3.12
+step:82800, acc_loss:3.00
+step:82900, acc_loss:3.28
+step:83000, acc_loss:3.26
+acc_pose:36.98, acc_match:0.31
+step:83100, acc_loss:3.25
+step:83200, acc_loss:3.16
+step:83300, acc_loss:3.09
+step:83400, acc_loss:3.28
+step:83500, acc_loss:3.31
+step:83600, acc_loss:3.37
+step:83700, acc_loss:3.29
+step:83800, acc_loss:3.33
+step:83900, acc_loss:3.24
+step:84000, acc_loss:3.18
+acc_pose:35.40, acc_match:0.29
+step:84100, acc_loss:3.18
+step:84200, acc_loss:3.20
+step:84300, acc_loss:3.26
+step:84400, acc_loss:3.23
+step:84500, acc_loss:3.14
+step:84600, acc_loss:3.17
+step:84700, acc_loss:3.20
+step:84800, acc_loss:3.41
+step:84900, acc_loss:3.17
+step:85000, acc_loss:3.29
+acc_pose:36.90, acc_match:0.71
+step:85100, acc_loss:3.04
+step:85200, acc_loss:3.32
+step:85300, acc_loss:3.22
+step:85400, acc_loss:3.26
+step:85500, acc_loss:3.25
+step:85600, acc_loss:3.14
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0022.tar to ../data/disk/0022.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0022.tar finish
+extracting ../data/disk/0022.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0022.tar finish
+load dataset 0022 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0071
+delete ../data/disk/0071.tar
+step:85700, acc_loss:3.84
+step:85800, acc_loss:4.21
+step:85900, acc_loss:4.14
+step:86000, acc_loss:4.39
+acc_pose:33.98, acc_match:0.67
+step:86100, acc_loss:4.22
+step:86200, acc_loss:4.31
+step:86300, acc_loss:4.30
+step:86400, acc_loss:4.16
+step:86500, acc_loss:4.36
+step:86600, acc_loss:4.20
+step:86700, acc_loss:4.17
+step:86800, acc_loss:4.10
+step:86900, acc_loss:4.33
+step:87000, acc_loss:4.31
+acc_pose:34.92, acc_match:0.33
+step:87100, acc_loss:4.16
+step:87200, acc_loss:4.28
+step:87300, acc_loss:4.22
+step:87400, acc_loss:4.34
+step:87500, acc_loss:4.41
+step:87600, acc_loss:4.41
+step:87700, acc_loss:4.16
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0096.tar to ../data/disk/0096.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0096.tar finish
+extracting ../data/disk/0096.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0096.tar finish
+load dataset 0096 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0022
+delete ../data/disk/0022.tar
+step:87800, acc_loss:2.75
+step:87900, acc_loss:2.37
+step:88000, acc_loss:2.62
+acc_pose:35.56, acc_match:0.29
+step:88100, acc_loss:2.46
+step:88200, acc_loss:2.55
+step:88300, acc_loss:2.49
+step:88400, acc_loss:2.48
+invalid data: cannot identify image file '/root/CV-Generic-3D-Representation/data/disk/0096/0000096_0052234_0000002_0012994.jpg'
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0035.tar to ../data/disk/0035.tar ...
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0035.tar finish
+extracting ../data/disk/0035.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0035.tar finish
+load dataset 0035 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0096
+delete ../data/disk/0096.tar
+step:88500, acc_loss:3.93
+step:88600, acc_loss:4.12
+step:88700, acc_loss:3.81
+step:88800, acc_loss:4.12
+step:88900, acc_loss:4.12
+step:89000, acc_loss:4.02
+acc_pose:35.21, acc_match:0.29
+step:89100, acc_loss:4.04
+step:89200, acc_loss:4.03
+step:89300, acc_loss:4.00
+step:89400, acc_loss:4.08
+step:89500, acc_loss:4.14
+step:89600, acc_loss:4.17
+step:89700, acc_loss:4.04
+step:89800, acc_loss:4.10
+step:89900, acc_loss:4.06
+step:90000, acc_loss:4.15
+acc_pose:36.44, acc_match:0.70
+saved repr0-90000.pkl
+step:90100, acc_loss:4.05
+step:90200, acc_loss:4.05
+step:90300, acc_loss:4.19
+step:90400, acc_loss:4.04
+step:90500, acc_loss:3.97
+step:90600, acc_loss:3.85
+step:90700, acc_loss:4.08
+step:90800, acc_loss:4.19
+step:90900, acc_loss:4.07
+step:91000, acc_loss:3.89
+acc_pose:34.27, acc_match:0.30
+step:91100, acc_loss:3.89
+step:91200, acc_loss:3.97
+step:91300, acc_loss:4.02
+step:91400, acc_loss:3.89
+step:91500, acc_loss:4.00
+step:91600, acc_loss:3.94
+step:91700, acc_loss:3.99
+step:91800, acc_loss:4.12
+step:91900, acc_loss:4.09
+step:92000, acc_loss:4.18
+acc_pose:35.09, acc_match:0.70
+step:92100, acc_loss:4.05
+downloading https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0004.tar to ../data/disk/0004.tar ...
+invalid data: cannot identify image file '/root/CV-Generic-3D-Representation/data/disk/0035/0000035_0245126_0000007_0040205.jpg'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0035/0000035_0000001_0000002_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0035/0000035_0000002_0000003_0000001.txt'
+invalid data: [Errno 2] No such file or directory: '/root/CV-Generic-3D-Representation/data/disk/0035/0000035_0000004_0000005_0000001.txt'
+download https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/0004.tar finish
+extracting ../data/disk/0004.tar to /root/CV-Generic-3D-Representation/data/disk ...
+extract ../data/disk/0004.tar finish
+load dataset 0004 finish
+delete /root/CV-Generic-3D-Representation/data/disk/0035
+delete ../data/disk/0035.tar
+step:92200, acc_loss:4.03
+step:92300, acc_loss:4.14
+step:92400, acc_loss:4.02
+step:92500, acc_loss:4.07
+step:92600, acc_loss:4.16
+step:92700, acc_loss:4.18
+step:92800, acc_loss:4.15
+step:92900, acc_loss:4.11
+step:93000, acc_loss:4.00
+acc_pose:36.01, acc_match:0.29
+step:93100, acc_loss:4.17
+step:93200, acc_loss:4.19
+step:93300, acc_loss:4.07
+step:93400, acc_loss:4.08
+step:93500, acc_loss:4.25
+step:93600, acc_loss:4.11
+step:93700, acc_loss:4.19
+step:93800, acc_loss:4.02
+step:93900, acc_loss:4.13
+step:94000, acc_loss:4.07
+acc_pose:34.69, acc_match:0.29
+step:94100, acc_loss:3.91
+step:94200, acc_loss:4.21
+step:94300, acc_loss:4.30
+step:94400, acc_loss:4.14
+step:94500, acc_loss:4.14
+step:94600, acc_loss:4.03
+step:94700, acc_loss:3.99
+step:94800, acc_loss:3.97
+step:94900, acc_loss:4.25
+step:95000, acc_loss:4.02
+acc_pose:35.26, acc_match:0.29
+step:95100, acc_loss:4.33
+step:95200, acc_loss:4.10
+step:95300, acc_loss:4.09
+/pytorch/aten/src/THC/THCTensorIndex.cu:447: IndexType indexToOffset(const TensorInfo<T, IndexType> &, long, IndexType) [with Dims = -2, T = float, IndexType = int]: block: [0,0,0], thread: [0,0,0] Assertion `linearIndex < size && linearIndex >= -size` failed.
+/pytorch/aten/src/THC/THCTensorIndex.cu:447: IndexType indexToOffset(const TensorInfo<T, IndexType> &, long, IndexType) [with Dims = -2, T = float, IndexType = int]: block: [0,0,0], thread: [1,0,0] Assertion `linearIndex < size && linearIndex >= -size` failed.
+/pytorch/aten/src/THC/THCTensorIndex.cu:447: IndexType indexToOffset(const TensorInfo<T, IndexType> &, long, IndexType) [with Dims = -2, T = float, IndexType = int]: block: [0,0,0], thread: [2,0,0] Assertion `linearIndex < size && linearIndex >= -size` failed.
+Traceback (most recent call last):
+  File "repr0.py", line 219, in <module>
+    loss = joint_loss(my_pose, my_match, true_pose, true_match)
+  File "repr0.py", line 111, in joint_loss
+    pose_loss = fposeloss(pose_loss)
+  File "repr0.py", line 91, in forward
+    ans[t] = 1 + torch.log(input[t])
+RuntimeError: copy_if failed to synchronize: device-side assert triggered
