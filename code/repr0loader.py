@@ -1,5 +1,6 @@
 import os
 import shutil
+import math
 import sys
 import requests
 from contextlib import closing
@@ -40,16 +41,16 @@ def extract_tar(fname, dname):
 
 imgtrans = transforms.Compose([
     transforms.Resize(101),
-    transforms.ToTensor()])
-#pose_mean = torch.Tensor([6.4316, 16.2672, 24.5792])
-#pose_std = torch.Tensor([0.7120, 4.8770, 107.5853])
-pose_mean = torch.Tensor([0, 16.2672, 24.5792])
-pose_std = torch.Tensor([1, 4.8770, 107.5853])
+    transforms.ToTensor(),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
+
+pose_mean = torch.Tensor([0, -0.7835600899294222, -0.493369725809238])
+pose_std = torch.Tensor([1, 21.81454787834064, 6.18895859105927])
 patch_size0 = 192
 
-#stat_n = 0
-#stat_sum = torch.Tensor([0, 0, 0])
-#stat_sum2 = torch.Tensor([0, 0, 0])
+stat_n = 0
+stat_sum = torch.Tensor([0, 0, 0])
+stat_sum2 = torch.Tensor([0, 0, 0])
 
 def read_data(dname, fname):
     #print('read image data %s' % fname)
@@ -62,11 +63,11 @@ def read_data(dname, fname):
     d = lines[0].split() # Google Meta Data
     #a = lines[1].split() if len(lines) >= 2 else None # Alignment Data
     a = None # Alignment Data (already aligned)
-    #d[5:8] # Target Point
-    #d[10:13] # Street View Location
-    distance = float(d[13]) # Distance to Target
+    #d[6:9] # Target Point
+    #d[11:14] # Street View Location
+    distance = float(d[14]) # Distance to Target
     distance = 0 # don't train distance!!!!!!!!!!!!!!!!!!
-    camera_pose = tuple((float(i) for i in d[14:17])) # Heading, Pitch, Roll
+    camera_pose = tuple((float(i) for i in d[15:18])) # Heading, Pitch, Roll
     camera_pose = camera_pose[:-1] # Roll is always zero
     if a is None:
         patch_center = (img.width // 2, img.height // 2)
@@ -76,7 +77,8 @@ def read_data(dname, fname):
     img = img.crop((patch_center[0]-patch_size_, patch_center[1]-patch_size_, patch_center[0]+patch_size_, patch_center[1]+patch_size_))
     img = imgtrans(img)
     pose = torch.Tensor([distance, camera_pose[0], camera_pose[1]])
-    pose = (pose - pose_mean) / pose_std
+    #pose = pose * math.pi / 180
+    #pose = (pose - pose_mean) / pose_std
 
     #global stat_n, stat_sum, stat_sum2
     #stat_n += 1
@@ -85,6 +87,8 @@ def read_data(dname, fname):
     #xmean = stat_sum / stat_n
     #s2 = (stat_sum2 - stat_n * xmean ** 2) / (stat_n - 1)
     #print(xmean, s2 ** 0.5)
+
+    #pose = pose * math.pi / 180
     return (img, pose)
 
 
@@ -100,15 +104,18 @@ class SceneDataset(Dataset):
         if not os.access(self.path, os.R_OK):
             download_url('https://storage.googleapis.com/streetview_image_pose_3d/dataset_aligned/%04d.tar' % datasetID, self.path)
 
-        extract_tar(self.path, self.dname)
+        dname2 = os.path.join(self.dname, '%04d' % datasetID)
+        if not os.path.isdir(dname2):
+            extract_tar(self.path, self.dname)
+        self.dname = dname2
 
-        self.dname = os.path.join(self.dname, '%04d' % datasetID)
+        get_tid = lambda x: int(x[x.rfind('_')+1:])
 
         data = {}
         for i in os.listdir(self.dname):
             bname, ext = os.path.splitext(i)
             if ext == ".jpg":
-                tid = int(bname[bname.rfind('_')+1:])
+                tid = get_tid(bname)
                 if data.get(tid) is None:
                     data[tid] = [bname]
                 else:
@@ -123,6 +130,7 @@ class SceneDataset(Dataset):
                 unmatch_data.append(bnames.pop())
             for i in range(0, len(bnames), 2):
                 match_pairs.append((bnames[i], bnames[i + 1]))
+        random.shuffle(unmatch_pairs)
         if len(unmatch_data) % 2 == 1:
             unmatch_data.pop()
         for i in range(0, len(unmatch_data), 2):
@@ -133,8 +141,11 @@ class SceneDataset(Dataset):
         while len(match_pairs) > len(unmatch_pairs) + 4 and len(match_pairs) > 2:
             p1 = match_pairs.pop()
             p2 = match_pairs.pop()
-            unmatch_pairs.append((p1[0], p2[1]))
-            unmatch_pairs.append((p1[1], p2[0]))
+            if get_tid(p1[0]) != get_tid(p2[1]):
+                unmatch_pairs.append((p1[0], p2[1]))
+                unmatch_pairs.append((p1[1], p2[0]))
+            else:
+                match_pairs = [p1, p2] + match_pairs
 
         self.pairs = []
         for i in match_pairs:
@@ -158,6 +169,7 @@ class SceneDataset(Dataset):
             return (torch.Tensor(6,101,101), (torch.Tensor(3), -1))
         imgc = torch.cat((img1, img2))
         pose = pose1 - pose2
+        pose = (pose - pose_mean) / pose_std
         return (imgc, (pose, match))
 
     def __del__(self):
@@ -170,14 +182,17 @@ class SceneDataset(Dataset):
 
 class TrainLoader:
 
-    def __init__(self, shuffleTar=True, keepTar=False):
+    def __init__(self, shuffleTar=True, keepTar=False, num=1):
         self.shuffleTar = shuffleTar
         self.keepTar = keepTar
         f = open('../data/list.txt', 'r')
-        self.ids = [int(i) for i in f.readlines()]
+        self.ids0 = [int(i) for i in f.readlines()]
         f.close()
         if shuffleTar:
-            random.shuffle(self.ids)
+            random.shuffle(self.ids0)
+        self.ids = []
+        for i in self.ids0:
+            self.ids += [i] * num
         self.loader = None
         self.it = None
 
@@ -194,7 +209,8 @@ class TrainLoader:
             except StopIteration:
                 if len(self.ids) == 0:
                     raise StopIteration
-                dataset = SceneDataset(self.ids.pop(), keepTar=self.keepTar)
+                i = self.ids.pop()
+                dataset = SceneDataset(i, keepTar=(self.keepTar or (len(self.ids) >= 1 and self.ids[-1] == i)))
                 #self.loader = DataLoader(dataset, batch_size=5, shuffle=True, num_workers=0)
                 self.loader = DataLoader(dataset, batch_size=32, shuffle=True, num_workers=16)
                 self.it = iter(self.loader)
@@ -230,4 +246,5 @@ class TestDataset(Dataset):
         camera_pose = [float(i) for i in self.data[idx][3:5]]
         distance = 0
         pose = torch.Tensor([distance, camera_pose[0], camera_pose[1]])
+        #pose = pose * math.pi / 180
         return (imgc, (pose, match))
