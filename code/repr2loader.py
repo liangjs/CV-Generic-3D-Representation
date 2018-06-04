@@ -180,40 +180,26 @@ class SceneDataset(Dataset):
             os.remove(self.path)
 
 
-class TrainLoader:
+class TrainDataset(Dataset):
 
-    def __init__(self, shuffleTar=True, keepTar=False, num=1):
-        self.shuffleTar = shuffleTar
-        self.keepTar = keepTar
+    def __init__(self):
+        super(TrainDataset, self).__init__()
         f = open('../data/list.txt', 'r')
-        self.ids0 = [int(i) for i in f.readlines()]
+        self.ids = [int(i) for i in f.readlines()]
         f.close()
-        if shuffleTar:
-            random.shuffle(self.ids0)
-        self.ids = []
-        for i in self.ids0:
-            self.ids += [i] * num
-        self.loader = None
-        self.it = None
+        self.dataset = [SceneDataset(i, keepTar=True) for i in self.ids]
+        self.lens = [len(d) for d in self.dataset]
+        self.sumlen = sum(self.lens)
 
-    def __iter__(self):
-        return self
+    def __len__(self):
+        return self.sumlen
 
-    def __next__(self):
-        while True:
-            try:
-                if self.it is None:
-                    raise StopIteration
-                #print('next loader iteration')
-                return next(self.it)
-            except StopIteration:
-                if len(self.ids) == 0:
-                    raise StopIteration
-                i = self.ids.pop()
-                dataset = SceneDataset(i, keepTar=(self.keepTar or (len(self.ids) >= 1 and self.ids[-1] == i)))
-                #self.loader = DataLoader(dataset, batch_size=5, shuffle=True, num_workers=0)
-                self.loader = DataLoader(dataset, batch_size=32, shuffle=True, num_workers=16)
-                self.it = iter(self.loader)
+    def __getitem__(self, idx):
+        i = 0
+        while idx >= self.lens[i]:
+            idx -= self.lens[i]
+            i += 1
+        return self.dataset[i][idx]
 
 
 class TestDataset(Dataset):
@@ -236,6 +222,7 @@ class TestDataset(Dataset):
         try:
             img1 = Image.open(img1)
             img2 = Image.open(img2)
+            # don't crop again
             #def mycrop(img):
             #    patch_center = (img.width // 2, img.height // 2)
             #    patch_size_ = patch_size0 // 2

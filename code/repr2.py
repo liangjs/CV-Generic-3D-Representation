@@ -20,7 +20,7 @@ import random
 import warnings
 warnings.filterwarnings("ignore")
 
-from repr0loader import *
+from repr2loader import *
 
 
 class ReprNet(nn.Module):
@@ -153,7 +153,7 @@ def validate(net, dataset, num):
 if __name__ == "__main__":
 
     net = CompdNet()
-    net.load_state_dict(torch.load('mytest.pkl'))
+    net.load_state_dict(torch.load('last.pkl'))
     print('load parameters')
     sys.stdout.flush()
 
@@ -169,18 +169,17 @@ if __name__ == "__main__":
 
     testdataset = TestDataset()
 
-    #print('acc_pose:%.2f, acc_match:%.2f' % validate(net, testdataset, len(testdataset)))
     print('acc_match:%.2f, acc_pose:%.2f' % validate(net, testdataset, min(10000, len(testdataset))))
     #print('acc_pose:%.2f, acc_match:%.2f' % validate(net, testdataset, len(testdataset)))
     sys.stdout.flush()
-    #sys.exit(0)
 
     counter = 0
 
     for epoch in range(100):
         print('epoch:', epoch)
 
-        trainloader = TrainLoader(shuffleTar=False, keepTar=False, num=4)
+        traindata = TrainDataset()
+        trainloader = DataLoader(traindata, batch_size=32, shuffle=True, num_workers=16)
 
         output_period = 100
         acc_loss_m = torch.zeros(1).to(device)
@@ -234,7 +233,7 @@ if __name__ == "__main__":
                 print('acc_match:%.2f, acc_pose:%.2f' % (acc_match, acc_pose))
 
             if counter % save_period == 0:
-                torch.save(net.state_dict(), 'repr0-%d-v4.pkl' % counter)
-                print('saved repr0-%d-v4.pkl' % counter)
+                torch.save(net.state_dict(), 'repr2-%d.pkl' % counter)
+                print('saved repr2-%d.pkl' % counter)
 
             sys.stdout.flush()
